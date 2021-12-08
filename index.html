@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+
+        <script>
+            fetch("https://ci-swapi.herokuapp.com/api/")
+                .then(response => response.text()) // or .json()
+                .then(data => {
+                    document.getElementById("content").innerText = data;
+                })
+                .catch.error("Error: ", e);
+            })
+    </script>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content"></div>
+
+    <script>
+        // use fetch to connect to the api url
+        // done this way so calls made asynchroniously
+        // doesnt need to be done in order 
+        fetch("https://ci-swapi.herokuapp.com/api/")
+            // chain then method on end
+            // this gets response, converts it to text and use arrow to store it in var called response
+            .then(response => response.text()) // or .json()
+            // chain a second then method
+            // this sets the text of #content div to the data returned
+            .then(data => {
+                document.getElementById("content").innerText = data;
+            });
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content"></div>
+
+    <script>
+        fetch("https://ci-swapi.herokuapp.com/api/")
+            .then(response => response.text()) // or .json()
+            .then(data => {
+                document.getElementById("content").innerText = data;
+            });
+    </script>
+</body>
+
+</html> -->
